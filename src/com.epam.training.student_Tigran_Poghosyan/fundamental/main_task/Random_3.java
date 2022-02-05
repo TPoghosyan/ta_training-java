@@ -1,3 +1,4 @@
+//Output a given number of random numbers(1-100) with and without a line break
 package main_task;
 
 import java.util.Scanner;
