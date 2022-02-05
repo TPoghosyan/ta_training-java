@@ -4,7 +4,7 @@ package main_task;
 
 import java.util.Scanner;
 
-public class Mounts_5 {
+public class Months_5 {
     public static void main(String[] args) {
         String months[] = new String[]{"January", "February", "March", "April", "May", "June", "July", "August",
                 "September", "October", "November", "December"};
