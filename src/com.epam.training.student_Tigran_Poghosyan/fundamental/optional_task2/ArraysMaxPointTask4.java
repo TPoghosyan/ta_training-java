@@ -3,7 +3,7 @@ package optional_task2;
 
 import java.util.Scanner;
 
-public class ArraysMaxPoint {
+public class ArraysMaxPointTask4 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Type n:   ");
@@ -20,7 +20,7 @@ public class ArraysMaxPoint {
                 }
             }
         }
-        printDigits(numbers);
+        SortMultidimensionalArraysTask1.printDigits(numbers);
         System.out.println();
         int maxElement = numbers[0][0];
         int maxElementFirstIndex = 0;
@@ -55,21 +55,6 @@ public class ArraysMaxPoint {
 
     }
 
-    static int digitCount(int number) {
-        int count = 0;
-        while (number / 10 != 0) {
-            number = number / 10;
-            count++;
-        }
-        return count + 1;
-    }
 
-    static void printDigits(int[][] a) {
-        for (int i = 0; i < a.length; i++) {
-            for (int j = 0; j < a[0].length; j++) {
-                System.out.print(a[i][j] + "    ");
-            }
-            System.out.println();
-        }
-    }
+
 }

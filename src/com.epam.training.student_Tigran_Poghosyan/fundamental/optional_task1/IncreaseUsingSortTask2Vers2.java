@@ -1,7 +1,7 @@
 //Вывести числа в порядке возрастания  значений их длины.
 package optional_task1;
 
-public class IncreaseUsingSort_2_2 {
+public class IncreaseUsingSortTask2Vers2 {
     public static void main(String[] args) {
 
 

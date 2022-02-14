@@ -5,10 +5,9 @@ package main_task;
 
 import java.util.Scanner;
 
-public class SumOfNumbers_4 {
+public class SumOfNumbersTask4 {
 
     public static void main(String[] args) {
-
         Scanner scanner = new Scanner(System.in);
         int inputDataCount = 3;
         int[] numbers = new int[inputDataCount];

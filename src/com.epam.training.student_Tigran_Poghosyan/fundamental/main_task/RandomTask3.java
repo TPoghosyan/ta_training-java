@@ -3,11 +3,13 @@ package main_task;
 
 import java.util.Scanner;
 
-public class Random_3 {
+public class RandomTask3 {
     public static void main(String[] args) {
 
         Scanner systemScanner = new Scanner(System.in);
         System.out.println("type how many random numbers do you want to print  ");
+       //  int numberOfDigits = Integer.parseInt(args[0]);
+        //
         int numberOfDigits = systemScanner.nextInt();
         int[] randomNumbers = new int[numberOfDigits];
         for (int i = 0; i < numberOfDigits; i++) {

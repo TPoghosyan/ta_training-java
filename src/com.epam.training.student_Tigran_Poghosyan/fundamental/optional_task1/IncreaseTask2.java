@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Scanner;
 
-public class Increase_2 {
+public class IncreaseTask2 {
     public static void main(String[] args) {
 
         Scanner consoleInp = new Scanner(System.in);

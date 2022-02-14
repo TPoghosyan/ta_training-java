@@ -4,7 +4,7 @@ package main_task;
 
 import java.util.Scanner;
 
-public class Months_5 {
+public class MonthsTask5 {
     public static void main(String[] args) {
         String months[] = new String[]{"January", "February", "March", "April", "May", "June", "July", "August",
                 "September", "October", "November", "December"};
@@ -15,7 +15,7 @@ public class Months_5 {
         boolean nextInt = scanner.hasNextInt();
         if (nextInt) {
             int number = scanner.nextInt();
-            if (number > 0 && number < 13) {
+            if (number > 0 && number < months.length) {
                 System.out.println("the " + number + "-th month is " + "\"" + months[number - 1] + "\"");
             } else {
                 System.out.println("please run program again and type int numbers 1-12");

@@ -9,7 +9,7 @@ package main_task;
 
 import java.util.Scanner;
 
-public class HelloUser_1 {
+public class HelloUserTask1 {
 
     public static String userName;
 

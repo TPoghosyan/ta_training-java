@@ -2,10 +2,28 @@ package optional_task1;
 
 public class BinnaryToDecimal {
     public static void main(String[] args) {
-        int decimalNumber = 2458;
+        int decimalNumber = Integer.MAX_VALUE;
         System.out.println("Десятичное число " + decimalNumber + " равно двоичному числу " + toBinary(decimalNumber));
-        String binaryNumber = "101011111";
+        String binaryNumber = "111";
         System.out.println("Двоичное число " + binaryNumber + " равно десятичному числу " + toDecimal(binaryNumber));
+
+        System.out.println(Integer.parseInt("111", 2));
+
+        int ret = 0;
+        for (char c : binaryNumber.toCharArray()) {
+            ret = (ret << 1) + Integer.valueOf(c) - Integer.valueOf('0');
+            //System.out.println(ret + "|" + Integer.valueOf(c));
+        }
+
+        String bin = "";
+        ret = 13;
+        while (ret > 0) {
+            bin = Integer.toString(ret & 1) + bin;
+            ret >>= 1;
+        }
+        System.out.println("bin="+bin);
+
+        System.out.println("ret =" + ret);
     }
 
     public static String toBinary(int decimalNumber) {
@@ -26,6 +44,7 @@ public class BinnaryToDecimal {
         if (binaryNumber == null) {
             return decimalNumber;
         }
+
 
         for (int i = 0; i < binaryNumber.length(); i++) {
             int index = binaryNumber.length() - 1 - i;

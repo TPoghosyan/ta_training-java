@@ -5,7 +5,7 @@ package optional_task2;
 
 import java.util.Scanner;
 
-public class SortMultidimensionalArrays {
+public class SortMultidimensionalArraysTask1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Type n:   ");
@@ -16,9 +16,9 @@ public class SortMultidimensionalArrays {
             for (int j = 0; j < n; j++) {
                 int flag = (int) (Math.random() * 2 + 1);
                 if (flag == 1) {
-                    numbers[i][j] = (int) (Math.random() * m +9);
+                    numbers[i][j] = (int) (Math.random() * m + 9);
                 } else {
-                    numbers[i][j] = (int) (Math.random() * -m -9);
+                    numbers[i][j] = (int) (Math.random() * -m - 9);
                 }
             }
         }
@@ -32,14 +32,14 @@ public class SortMultidimensionalArrays {
             boolean thereAreChanges = false;
             for (int i = 0; i < numbers.length - 1; i++) {
                 int[] saveFirstPoint = new int[n];
-                    if (numbers[i][k] > numbers[i + 1][k]) {
-                        saveFirstPoint = numbers[i];
-                        numbers[i] = numbers[i + 1];
-                        numbers[i+1] = saveFirstPoint;
+                if (numbers[i][k] > numbers[i + 1][k]) {
+                    saveFirstPoint = numbers[i];
+                    numbers[i] = numbers[i + 1];
+                    numbers[i + 1] = saveFirstPoint;
 //                        saveFirstPoint1 = numberss[1][i];
 //                        numberss[1][i] = numberss[1][i + 1];
 //                        numberss[1][i + 1] = saveFirstPoint1;
-                   thereAreChanges = true;
+                    thereAreChanges = true;
                 }
                 if (thereAreChanges) {
                     sorted = false;
@@ -47,19 +47,11 @@ public class SortMultidimensionalArrays {
             }
 
         }
+        System.out.println("sort by " + k);
         printDigits(numbers);
     }
 
-    static int digitCount(int number) {
-        int count = 0;
-        while (number / 10 != 0) {
-            number = number / 10;
-            count++;
-        }
-        return count + 1;
-    }
-
-    static void printDigits(int[][] a) {
+       static void printDigits(int[][] a) {
         for (int i = 0; i < a.length; i++) {
             for (int j = 0; j < a[0].length; j++) {
                 System.out.print(a[i][j] + "    ");
@@ -67,6 +59,4 @@ public class SortMultidimensionalArrays {
             System.out.println();
         }
     }
-
-
 }

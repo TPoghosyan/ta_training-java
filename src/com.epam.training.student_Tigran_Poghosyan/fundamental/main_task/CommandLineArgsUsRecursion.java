@@ -1,4 +1,4 @@
-package main_task.main_task;
+package main_task;
 
 import java.util.Arrays;
 
