@@ -22,14 +22,13 @@ public class FindLongestShortestNumTask1 {
                 shortestNumDigits = IncreaseUsingSortTask2Vers2.digitCount(numbers[i]);
 
             }
-        }
-        for (int i = 0; i < inputDataCount; i++) {
+
             if (Math.abs(numbers[i]) > Math.abs(longestNum)) {
                 longestNum = numbers[i];
                 longestNumDigits = IncreaseUsingSortTask2Vers2.digitCount(numbers[i]);
             }
         }
-        System.out.println("shortest number is  " + shortestNum + " digits are " +shortestNumDigits);
+        System.out.println("shortest number is  " + shortestNum + " digits are " + shortestNumDigits);
         System.out.println("longest number is  " + longestNum + "   digits are " + longestNumDigits);
     }
 }

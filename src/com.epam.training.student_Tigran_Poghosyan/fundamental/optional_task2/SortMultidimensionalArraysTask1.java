@@ -51,7 +51,7 @@ public class SortMultidimensionalArraysTask1 {
         printDigits(numbers);
     }
 
-       static void printDigits(int[][] a) {
+    static void printDigits(int[][] a) {
         for (int i = 0; i < a.length; i++) {
             for (int j = 0; j < a[0].length; j++) {
                 System.out.print(a[i][j] + "    ");
