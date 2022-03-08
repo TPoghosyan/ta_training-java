@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class ExeFibonacci {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("please type any integer number >= 1 and < 96 ");
+        System.out.print("please type any integer number > 1 and < 96 ");
         Long n = scanner.nextLong();
         Fibonacci fibonacci = new Fibonacci(n);
         fibonacci.countFibonacci();
