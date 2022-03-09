@@ -29,7 +29,7 @@ class Fibonacci2 {
     public long nThFibonacci = 0;
 
     public void countFibonacci(int n) {
-        if (n <= 1) {
+        if (n <= 1) { 
             return;
         }
         nThFibonacci = fibonacciLast + fibonacciPenultimate;
