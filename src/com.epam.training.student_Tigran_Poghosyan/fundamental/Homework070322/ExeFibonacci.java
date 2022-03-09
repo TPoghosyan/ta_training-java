@@ -20,10 +20,18 @@ class Fibonacci {
     public long n;
 
     Fibonacci(long n) {
-        this.n = n;
+        if (n > 1 && n < 96) {
+            this.n = n;
+        } else {
+            this.n = -1;
+        }
     }
 
     public void countFibonacci() {
+        if (n < 0) {
+            nThFibonacci = -1;
+            return;
+        }
         if (n <= 2) {
             return;
         }
