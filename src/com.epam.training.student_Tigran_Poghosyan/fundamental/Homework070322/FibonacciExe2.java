@@ -2,7 +2,6 @@
 //F_{n}	…	−55	34	−21	13	−8	5	−3	2	−1	 1  0	1	1	2	3	5	8	13	21	34	55	…
 package Homework070322;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class FibonacciExe2 {
@@ -16,8 +15,8 @@ public class FibonacciExe2 {
         if (n < 0) {
             fibonacci2.nThFibonacci = (long) Math.pow(-1, n + 1) * fibonacci2.nThFibonacci;
         }
-        if (n == 1 || n == -1){
-            fibonacci2.nThFibonacci =1;
+        if (n == 1 || n == -1) {
+            fibonacci2.nThFibonacci = 1;
         }
         System.out.println("the " + n + "-th element of the fibonacci sequence is " + fibonacci2.nThFibonacci);
     }
@@ -29,14 +28,12 @@ class Fibonacci2 {
     public long nThFibonacci = 0;
 
     public void countFibonacci(int n) {
-        if (n <= 1) { 
+        if (n <= 1) {
             return;
         }
         nThFibonacci = fibonacciLast + fibonacciPenultimate;
         fibonacciPenultimate = fibonacciLast;
         fibonacciLast = nThFibonacci;
         countFibonacci(--n);
-
-
     }
 }
