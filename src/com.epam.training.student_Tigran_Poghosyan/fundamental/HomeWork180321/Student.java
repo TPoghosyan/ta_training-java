@@ -7,8 +7,8 @@ import java.text.ParseException;
 import java.util.Date;
 
 public class Student {
-
-    private  int idNumber;
+    private  static int num =0;
+    private  int idNumber = 0;
     private String name;
     private String surName;
     private String fatherLand;
@@ -20,7 +20,7 @@ public class Student {
     private int group;
 
     public Student(String name, String surName, String fatherLand, Date birthDay, String adress, String phoneNumber, String faculty, int course, int group, int idNumber) throws ParseException {
-        this.idNumber = idNumber;
+        this.idNumber = num++;
         this.name = name;
         this.surName = surName;
         this.fatherLand = fatherLand;
@@ -32,8 +32,8 @@ public class Student {
         this.group = group;
     }
 
-    public Student(String name, String surName, Date birthDay, String adress, String phoneNumber, String faculty, int course, int group,int idNumber) throws ParseException {
-        this.idNumber = idNumber;
+    public Student(String name, String surName, Date birthDay, String adress, String phoneNumber, String faculty, int course, int group) throws ParseException {
+        this.idNumber = num++;
         this.name = name;
         this.surName = surName;
         this.fatherLand = "";
@@ -45,8 +45,8 @@ public class Student {
         this.group = group;
     }
 
-    public Student(String name, String surName, Date birthDay, String phoneNumber, String faculty, int course, int group,int idNumber) throws ParseException {
-        this.idNumber = idNumber;
+    public Student(String name, String surName, Date birthDay, String phoneNumber, String faculty, int course, int group) throws ParseException {
+        this.idNumber = num++;
         this.name = name;
         this.surName = surName;
         this.fatherLand = "";
@@ -58,8 +58,8 @@ public class Student {
         this.group = group;
     }
 
-    public Student(String name, String surName, Date birthDay, String faculty, int course, int group, int idNumber) throws ParseException {
-        this.idNumber = idNumber;
+    public Student(String name, String surName, Date birthDay, String faculty, int course, int group) throws ParseException {
+        this.idNumber = num++;
         this.name = name;
         this.surName = surName;
         this.fatherLand = "";
@@ -71,8 +71,8 @@ public class Student {
         this.group = group;
     }
 
-    public Student(String name, String surName, String faculty, int course, int group, int idNumber) throws ParseException {
-        idNumber++;
+    public Student(String name, String surName, String faculty, int course, int group) throws ParseException {
+        this.idNumber = num++;
         this.name = name;
         this.surName = surName;
         this.fatherLand = "";
