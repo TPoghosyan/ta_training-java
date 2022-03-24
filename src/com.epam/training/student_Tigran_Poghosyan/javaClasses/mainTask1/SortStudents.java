@@ -19,11 +19,11 @@ public class SortStudents {
         Student tigranPetrosyan = new Student("Tigran", "Petrosyan", simpleDateFormat.parse("05/04/1989"),
                 "vt", 3, 1);
         Student armenDallaqyan = new Student("armen", "Dallaqyan", simpleDateFormat.parse("05/04/1990"),
-                "radio", 2, 1);
+                "radio", 3, 1);
         Student artakSimonyan = new Student("Artak", "Simonyan", simpleDateFormat.parse("05/04/1991"),
-                "radio", 1, 2);
+                "radio", 2, 2);
         Student hakobVardanyan = new Student("Hakob", "Vardanyan", "Armeni", simpleDateFormat.parse("05/04/1990"),
-                "Goris", "099008070", "radio", 2,1);
+                "Goris", "099008070", "radio", 1,1);
 
         Student[] students = tigranPetrosyan.createStudentsList(tigranPetrosyan, tigranPoghosyan, armenDallaqyan, artakSimonyan,hakobVardanyan);
 
@@ -62,9 +62,11 @@ public class SortStudents {
             }
 
         }
+        System.out.println();
+        System.out.println("sort all students by faculity");
         for (Student x: students
              ) {
-            System.out.println(x.getFaculty());
+            System.out.println(x.getFaculty() + " course " + x.getCourse() + " group " + x.getGroup());
 
         }
 
