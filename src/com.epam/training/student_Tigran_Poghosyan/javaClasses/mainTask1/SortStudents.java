@@ -1,9 +1,11 @@
 /*1. Student: id, Фамилия, Имя, Отчество, Дата рождения, Адрес, Телефон, Факультет, Курс, Группа.
 Создать массив объектов. Вывести:
 a) список студентов заданного факультета;
+b) списки студентов для каждого факультета и курса;
 c) список студентов, родившихся после заданного года;
 d) список учебной группы.*/
 package student_Tigran_Poghosyan.javaClasses.mainTask1;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
@@ -23,9 +25,9 @@ public class SortStudents {
         Student artakSimonyan = new Student("Artak", "Simonyan", simpleDateFormat.parse("05/04/1991"),
                 "radio", 2, 2);
         Student hakobVardanyan = new Student("Hakob", "Vardanyan", "Armeni", simpleDateFormat.parse("05/04/1990"),
-                "Goris", "099008070", "radio", 1,1);
+                "Goris", "099008070", "radio", 1, 1);
 
-        Student[] students = tigranPetrosyan.createStudentsList(tigranPetrosyan, tigranPoghosyan, armenDallaqyan, artakSimonyan,hakobVardanyan);
+        Student[] students = tigranPetrosyan.createStudentsList(tigranPetrosyan, tigranPoghosyan, armenDallaqyan, artakSimonyan, hakobVardanyan);
 
         System.out.println("Radio facultet students list");
         for (Student sort : students) {                        //task a
@@ -47,13 +49,13 @@ public class SortStudents {
         while (!sorted) {
             sorted = true;
             boolean thereAreChanges = false;
-            for (int i = 0; i < students.length-1; i++) {
+            for (int i = 0; i < students.length - 1; i++) {
                 Student saveFirstPoint;
                 String firstLetter = students[i].getFaculty();
-                if(students[i].getFaculty().charAt(0) > students[i+1].getFaculty().charAt(0)) {
+                if (students[i].getFaculty().charAt(0) > students[i + 1].getFaculty().charAt(0)) {
                     saveFirstPoint = students[i];
-                    students[i] = students[i+1];
-                    students[i+1] = saveFirstPoint;
+                    students[i] = students[i + 1];
+                    students[i + 1] = saveFirstPoint;
                     thereAreChanges = true;
                 }
             }
@@ -64,13 +66,11 @@ public class SortStudents {
         }
         System.out.println();
         System.out.println("sort all students by faculity");
-        for (Student x: students
-             ) {
+        for (Student x : students
+        ) {
             System.out.println(x.getFaculty() + " course " + x.getCourse() + " group " + x.getGroup());
 
         }
-
-
 
     }
 }

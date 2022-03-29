@@ -88,10 +88,6 @@ public class Student {
         return idNumber;
     }
 
-    public void setIdNumber(int idNumber) {
-        this.idNumber = idNumber;
-    }
-
     public String getName() {
         return name;
     }
